@@ -1,0 +1,12 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.btn-detail{
+    -fx-background-color:  #74b9ff;
+    -fx-cursor: hand;
+}
+    
+.homeAnchorPane{
+    -fx-background-image: url(img/bg-christmas.jpg);
+}

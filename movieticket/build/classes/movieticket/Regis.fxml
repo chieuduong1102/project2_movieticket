@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="400.0" style="-fx-background-color: #2c3e50;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movieticket.RegisController">
+    <stylesheets>
+        <!--<URL value="@regis.css" />-->
+    </stylesheets>
+   <children>
+      <Label layoutX="128.0" layoutY="30.0" style="-fx-text-fill: #81ecec;" text="Registration" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="93.0" text="Full name" textFill="WHITE" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputFullName" layoutX="155.0" layoutY="87.0" prefHeight="32.0" prefWidth="220.0" AnchorPane.rightAnchor="25.0" />
+      <Label layoutX="20.0" layoutY="150.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Date of birth" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="208.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Username" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="262.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Password" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="316.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Confirm Password" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="365.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Email" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="423.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Phone Number" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="481.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" text="Address" AnchorPane.leftAnchor="20.0" />
+      <TextField fx:id="inputDob" layoutX="155.0" layoutY="144.0" prefHeight="32.0" prefWidth="220.0" AnchorPane.rightAnchor="25.0" />
+      <TextField fx:id="inputUsername" layoutX="155.0" layoutY="201.0" prefHeight="32.0" prefWidth="220.0" AnchorPane.rightAnchor="25.0" />
+      <TextField fx:id="inputPassword1" layoutX="155.0" layoutY="255.0" prefHeight="32.0" prefWidth="220.0" AnchorPane.rightAnchor="25.0" />
+      <TextField fx:id="inputPassword2" layoutX="155.0" layoutY="308.0" prefHeight="32.0" prefWidth="220.0" AnchorPane.rightAnchor="25.0" />
+      <TextField fx:id="inputEmail" layoutX="155.0" layoutY="360.0" prefHeight="32.0" prefWidth="220.0" AnchorPane.rightAnchor="25.0" />
+      <TextField fx:id="inputPhoneNumber" layoutX="155.0" layoutY="417.0" prefHeight="32.0" prefWidth="220.0" AnchorPane.rightAnchor="25.0" />
+      <TextField fx:id="inputAddress" layoutX="155.0" layoutY="474.0" prefHeight="32.0" prefWidth="220.0" AnchorPane.rightAnchor="25.0" />
+      <Button fx:id="btnRegis" layoutX="126.0" layoutY="548.0" mnemonicParsing="false" onAction="#btnRegisClick" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Regis">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="128.0" layoutY="600.0" style="-fx-text-fill: white;" text="You have account!" />
+      <Hyperlink layoutX="235.0" layoutY="597.0" onAction="#clickGoToLogin" style="-fx-font-weight: bold;" text="Login" />
+   </children>
+</AnchorPane>

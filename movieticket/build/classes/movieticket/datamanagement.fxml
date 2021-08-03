@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movieticket.DatamanagementController">
+    <stylesheets>
+        <URL value="@css/datamanagement.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="900.0">
+         <center>
+            <TabPane prefHeight="379.0" prefWidth="722.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Admin account">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <TextField fx:id="inputUsernameAdmin" layoutX="133.0" layoutY="62.0" prefHeight="30.0" prefWidth="200.0" promptText="Username" />
+                              <TextField fx:id="inputPasswordAdmin" layoutX="132.0" layoutY="119.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" />
+                              <Button fx:id="btnSubmit" layoutX="132.0" layoutY="241.0" mnemonicParsing="false" onAction="#btnSubmitAdminAccount" prefHeight="31.0" prefWidth="120.0" style="-fx-background-radius: 18; -fx-background-color: #0984e3; -fx-text-fill: #FFFFFF;" text="Create new">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <TextField fx:id="inputPasswordAdminAgain" layoutX="132.0" layoutY="178.0" prefHeight="30.0" prefWidth="200.0" promptText="Password Again" />
+                              <TableView fx:id="tvAdmin" layoutX="448.0" layoutY="29.0" prefHeight="317.0" prefWidth="405.0">
+                                <columns>
+                                  <TableColumn fx:id="tcAdminUsername" minWidth="0.0" prefWidth="204.0" text="Username" />
+                                  <TableColumn fx:id="tcAdminPassword" minWidth="7.66668701171875" prefWidth="200.0" text="Password" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="14.0" layoutY="66.0" style="-fx-font-weight: bold;" text="Username" AnchorPane.leftAnchor="44.0" />
+                              <Label layoutX="16.0" layoutY="125.0" style="-fx-font-weight: bold;" text="Password" AnchorPane.leftAnchor="44.0" />
+                              <Label layoutX="14.0" layoutY="176.0" style="-fx-font-weight: bold;" text="Comfirm" AnchorPane.leftAnchor="44.0" />
+                              <Label fx:id="lbMessage" layoutX="15.0" layoutY="317.0" textFill="#ff1b05" />
+                              <Button fx:id="btnEditAdmin" layoutX="443.0" layoutY="385.0" mnemonicParsing="false" onAction="#btnEditAdminClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Edit" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnDetailAdmin" layoutX="586.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnDetailAdminClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Detail" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnDeleteAdmin" layoutX="738.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnDeleteAdminClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Delete" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Label layoutX="12.0" layoutY="200.0" text="Password" AnchorPane.leftAnchor="44.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Staff account">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="723.0">
+                           <children>
+                              <TableView fx:id="tvStaff" layoutX="443.0" layoutY="23.0" prefHeight="317.0" prefWidth="405.0">
+                                <columns>
+                                  <TableColumn fx:id="tcFullnameStaff" prefWidth="130.0" text="FullName" />
+                                  <TableColumn fx:id="tcNameStaff" prefWidth="130.0" text="User Name" />
+                                    <TableColumn fx:id="tcPhoneStaff" prefWidth="130.0" text="Phone" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="inputStaffFullname" layoutX="124.0" layoutY="14.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputStafDob" layoutX="124.0" layoutY="54.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputStaffUsername" layoutX="124.0" layoutY="95.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputStaffPassword" layoutX="124.0" layoutY="134.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputStaffEmail" layoutX="124.0" layoutY="176.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputStaffPhonenumber" layoutX="124.0" layoutY="218.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputStaffAddress" layoutX="125.0" layoutY="267.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label layoutX="26.0" layoutY="19.0" text="Full Name">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="59.0" text="DOB">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="100.0" text="User Name">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="139.0" text="Password">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="181.0" text="Email">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="223.0" text="Phone Number">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="272.0" text="Adderss">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnCreateStaff" layoutX="145.0" layoutY="320.0" mnemonicParsing="false" onAction="#btnCreateStaff" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Create New">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEditStaff" layoutX="452.0" layoutY="387.0" mnemonicParsing="false" onAction="#btnEditStaffClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Edit" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnDetailStaff" layoutX="584.0" layoutY="387.0" mnemonicParsing="false" onAction="#btnDetailStaffClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Detail" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnDeleteStaff" layoutX="713.0" layoutY="387.0" mnemonicParsing="false" onAction="#btnDeleteStaffClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Delete" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Label fx:id="lbMessageStaff" layoutX="38.0" layoutY="374.0" />
+                           </children></AnchorPane>
+                     </content>
+                </Tab>
+                  <Tab text="Viewer account">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="730.0">
+                           <children>
+                              <TableView fx:id="tvViewer" layoutX="424.0" layoutY="25.0" prefHeight="327.0" prefWidth="405.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcFullnameViewer" prefWidth="131.66668701171875" text="FullName" />
+                                    <TableColumn fx:id="tcUserNameViewer" prefWidth="139.33331298828125" text="User Name" />
+                                    <TableColumn fx:id="tcPhoneViewer" prefWidth="133.0" text="Phone" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="inputViewerFullname" layoutX="124.0" layoutY="14.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputViewerDob" layoutX="124.0" layoutY="54.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputViewerUsername" layoutX="124.0" layoutY="95.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputViewerPassword" layoutX="124.0" layoutY="134.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputViewerEmail" layoutX="124.0" layoutY="176.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputViewerPhonenumber" layoutX="124.0" layoutY="218.0" prefHeight="30.0" prefWidth="200.0" />
+                              <TextField fx:id="inputViewerAddress" layoutX="125.0" layoutY="267.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Label layoutX="26.0" layoutY="19.0" text="Full Name">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="59.0" text="DOB">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="100.0" text="User Name">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="139.0" text="Password">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="181.0" text="Email">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="223.0" text="Phone Number">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="272.0" text="Adderss">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnCreateViewer" layoutX="145.0" layoutY="320.0" mnemonicParsing="false" onAction="#btnCreateViewer" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Create New">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnEditView" layoutX="438.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnEditViewerClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Edit" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnDetailViewer" layoutX="570.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnDetailViewerClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Detail" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnDeleteViewer" layoutX="699.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnDeleteViewerClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Delete" AnchorPane.bottomAnchor="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="lbMessageViewer" layoutX="38.0" layoutY="374.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Category">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tvCategory" layoutX="511.0" layoutY="14.0" prefHeight="393.0" prefWidth="325.0">
+                                <columns>
+                                  <TableColumn fx:id="tcCategoryName" prefWidth="311.0" text="Category Name" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="53.0" layoutY="75.0" text="Category Name">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inputCategoryName" layoutX="176.0" layoutY="70.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Button fx:id="btnCreateNewCategoryname" layoutX="176.0" layoutY="128.0" mnemonicParsing="false" onAction="#btnCreateCategory" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Create New">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnEditCategory" layoutX="522.0" layoutY="425.0" mnemonicParsing="false" onAction="#btnEditCategoryClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-text-fill: #FFFFFF; -fx-background-radius: 16;" text="Edit" AnchorPane.bottomAnchor="90.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnDeleteCategoryName" layoutX="705.0" layoutY="425.0" mnemonicParsing="false" onAction="#btnDeleteCategoryName" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-text-fill: #FFFFFF; -fx-background-radius: 16;" text="Delete" AnchorPane.bottomAnchor="90.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Movie">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tvMovie" layoutX="13.0" layoutY="125.0" prefHeight="369.0" prefWidth="874.0">
+                                <columns>
+                                  <TableColumn fx:id="tcTitle" prefWidth="225.0" text="Title" />
+                                  <TableColumn fx:id="tcDirector" minWidth="0.0" prefWidth="190.0" text="Director" />
+                                    <TableColumn fx:id="tcNation" prefWidth="79.0" text="Nation" />
+                                    <TableColumn fx:id="tcYear" prefWidth="58.0" text="Year" />
+                                    <TableColumn fx:id="tcViews" prefWidth="55.0" text="Views" />
+                                    <TableColumn fx:id="tcStatus" prefWidth="143.0" text="Status" />
+                                    <TableColumn fx:id="tcCover" prefWidth="123.0" text="Cover" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="23.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Title" />
+                              <Label layoutX="22.0" layoutY="44.0" style="-fx-font-weight: bold;" text="Director" />
+                              <Label layoutX="21.0" layoutY="75.0" style="-fx-font-weight: bold;" text="Nation" />
+                              <TextField fx:id="inputTitleMovie" layoutX="92.0" layoutY="10.0" />
+                              <TextField fx:id="inputDirectorMovie" layoutX="92.0" layoutY="40.0" />
+                              <TextField fx:id="inputNationMovie" layoutX="92.0" layoutY="71.0" />
+                              <Label layoutX="288.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Year" />
+                              <Label layoutX="287.0" layoutY="44.0" style="-fx-font-weight: bold;" text="Views" />
+                              <Label layoutX="287.0" layoutY="75.0" style="-fx-font-weight: bold;" text="Status" />
+                              <TextField fx:id="inputYearMovie" layoutX="346.0" layoutY="10.0" />
+                              <TextField fx:id="inputViewsMovie" layoutX="346.0" layoutY="40.0" />
+                              <TextField fx:id="inputCoverMovie" layoutX="605.0" layoutY="10.0" prefHeight="25.0" prefWidth="227.0" />
+                              <Label layoutX="557.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Cover" />
+                              <Button fx:id="btnChoosefileCover" layoutX="754.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnChoosefileCoverClick" text="Choose File">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btnCreateMovie" layoutX="643.0" layoutY="56.0" mnemonicParsing="false" onAction="#btnCreateMovieClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Create New">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnEditMovie" layoutX="260.0" layoutY="507.0" mnemonicParsing="false" onAction="#btnEditMovieClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Edit" AnchorPane.bottomAnchor="10.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnDelleteMovie" layoutX="548.0" layoutY="507.0" mnemonicParsing="false" onAction="#btnDeleteMovieClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Delete" AnchorPane.bottomAnchor="10.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <ComboBox fx:id="comboBoxStatusMovie" layoutX="346.0" layoutY="74.0" prefWidth="150.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ComboBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="CategoryMovie">
+                    <content>
+                      <AnchorPane fx:id="MovieCategoryTab" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="37.0" layoutY="41.0" text="Movie">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="comboBoxMovie" layoutX="37.0" layoutY="68.0" prefHeight="30.0" prefWidth="220.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <ComboBox fx:id="comboBoxCategory" layoutX="37.0" layoutY="144.0" prefHeight="30.0" prefWidth="220.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <Label layoutX="38.0" layoutY="117.0" text="Category">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnSubmitCM" layoutX="90.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnSubmitCMClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Submit">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TableView fx:id="tvCategoryMovie" layoutX="389.0" layoutY="40.0" prefHeight="435.0" prefWidth="430.0">
+                                <columns>
+                                  <TableColumn fx:id="tcMovieMC" prefWidth="266.0" text="Movie" />
+                                  <TableColumn fx:id="tcCategoryMC" prefWidth="163.0" text="Category" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="btnEditMC" layoutX="476.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnEditMCClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Edit" AnchorPane.bottomAnchor="25.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="editDeleteMC" layoutX="653.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnDeleteMCClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Delete" AnchorPane.bottomAnchor="25.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label fx:id="lbtest" layoutX="124.0" layoutY="357.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Room and Seat">
+                    <content>
+                      <AnchorPane fx:id="seatAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tvRoom" layoutX="421.0" layoutY="25.0" prefHeight="305.0" prefWidth="180.0">
+                                <columns>
+                                  <TableColumn fx:id="tcRoomName" prefWidth="180.0" text="Room" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="tvTimeslot" layoutX="664.0" layoutY="28.0" prefHeight="300.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="tcTimeslot" prefWidth="199.0" text="Timeslot" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="170.0" layoutY="10.0" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Seat" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="TicketDetail">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tvTicketDetail" layoutX="14.0" layoutY="160.0" prefHeight="335.0" prefWidth="883.0">
+                                <columns>
+                                    <TableColumn fx:id="tcCustomer" prefWidth="130.5555419921875" text="Customer" />
+                                    <TableColumn fx:id="tcPhoneNumber" prefWidth="89.4444580078125" text="PhoneNumber" />
+                                  <TableColumn fx:id="tcMovieNameTD" prefWidth="162.0" text="Title Movie" />
+                                  <TableColumn fx:id="tcRoomTD" prefWidth="61.666656494140625" text="Room" />
+                                    <TableColumn fx:id="tcTimeSlotTD" prefWidth="132.33334350585938" text="Timeslot" />
+                                    <TableColumn fx:id="tcSeatTD" prefWidth="92.0" text="Seat" />
+                                    <TableColumn fx:id="tcPrice" prefWidth="52.0" text="Price" />
+                                    <TableColumn fx:id="tcQuantity" prefWidth="75.0" text="Quantity" />
+                                    <TableColumn fx:id="tcTotal" prefWidth="85.66668701171875" text="Total" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="btnEditTD" layoutX="294.0" layoutY="506.0" mnemonicParsing="false" onAction="#btnEditTDClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Edit" AnchorPane.bottomAnchor="10.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnDeleteTD" layoutX="525.0" layoutY="506.0" mnemonicParsing="false" onAction="#btnDeleteTDClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Delete" AnchorPane.bottomAnchor="10.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label layoutX="28.0" layoutY="72.0" text="Title Movie">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="73.0" layoutY="119.0" text="Room">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="512.0" layoutY="72.0" text="Tineslot">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="268.0" layoutY="118.0" text="Seat">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnSubmitTD" layoutX="706.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnSubmitTDClick" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Create New">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <ComboBox fx:id="comboBoxMovieNameTD" layoutX="129.0" layoutY="66.0" prefHeight="30.0" prefWidth="297.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <ComboBox fx:id="comboBoxRoomTD" layoutX="128.0" layoutY="116.0" prefHeight="30.0" prefWidth="116.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <ComboBox fx:id="comboBoxTimeSlotTD" layoutX="581.0" layoutY="69.0" prefHeight="30.0" prefWidth="253.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <Label layoutX="511.0" layoutY="122.0" text="Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inputQuantityTD" layoutX="580.0" layoutY="117.0" prefHeight="30.0" prefWidth="71.0" />
+                              <TextField fx:id="inputSeatTD" layoutX="308.0" layoutY="114.0" prefHeight="30.0" prefWidth="116.0" />
+                              <Label layoutX="29.0" layoutY="26.0" text="Customer">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="471.0" layoutY="26.0" text="Phonenumber">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inputCustomerTD" layoutX="129.0" layoutY="23.0" prefHeight="30.0" prefWidth="296.0" />
+                              <TextField fx:id="inputPhoneNumberTD" layoutX="580.0" layoutY="23.0" prefHeight="30.0" prefWidth="253.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="23.0" prefWidth="829.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnLogout" layoutX="818.0" mnemonicParsing="false" onAction="#btnLogOutClick" style="-fx-background-color: transparent; -fx-border-color: none; -fx-font-weight: bold; -fx-text-fill: red;" text="Đăng xuất">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label layoutX="663.0" layoutY="4.0" text="Xin chào :" />
+                  <Label fx:id="lbSessionusername" layoutX="731.0" layoutY="4.0" style="-fx-font-weight: bold;" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

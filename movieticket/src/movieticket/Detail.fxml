@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.Icon?>-->
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneDetail" prefHeight="480.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movieticket.DetailController">
+    <stylesheets>
+        <URL value="@detail.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="btnDatVe" layoutX="80.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnDatVeClick" prefHeight="36.0" prefWidth="170.0" style="-fx-font-weight: bold; -fx-background-radius: 18; -fx-background-color: #0984e3; -fx-text-fill: white;" text="Đặt vé">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="359.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Đạo diễn :" wrappingWidth="74.65575905144215" AnchorPane.leftAnchor="310.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="359.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Quốc gia :" AnchorPane.leftAnchor="310.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="359.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Năm :" AnchorPane.leftAnchor="310.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="359.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Số Lượt Xem :" AnchorPane.leftAnchor="310.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="lbTitleMovie" layoutX="359.0" layoutY="58.0" textFill="#2c3e50" AnchorPane.leftAnchor="310.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDirectorMovie" layoutX="474.0" layoutY="142.0" AnchorPane.leftAnchor="425.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbNationMovie" layoutX="474.0" layoutY="177.0" AnchorPane.leftAnchor="425.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbYearMovie" layoutX="474.0" layoutY="213.0" AnchorPane.leftAnchor="425.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbViewerMovie" layoutX="474.0" layoutY="245.0" AnchorPane.leftAnchor="425.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBackDT" layoutX="7.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnBackDTClick" style="-fx-background-color: transparent; -fx-text-fill: black;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/btn-back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

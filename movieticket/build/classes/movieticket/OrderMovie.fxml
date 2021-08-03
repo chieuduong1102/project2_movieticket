@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movieticket.OrderMovieController">
+   <children>
+      <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MovieTicket" wrappingWidth="120.6708984375">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="121.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NCC" />
+      <Text layoutX="38.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên khách hàng :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="lbCustomerName" layoutX="166.0" layoutY="106.0" prefHeight="21.0" prefWidth="190.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="cbTime" layoutX="32.0" layoutY="245.0" prefHeight="31.0" prefWidth="181.0" AnchorPane.leftAnchor="39.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox fx:id="cbRoom" layoutX="32.0" layoutY="171.0" prefHeight="31.0" prefWidth="181.0" AnchorPane.leftAnchor="39.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Text layoutX="488.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="39.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng vé :" AnchorPane.leftAnchor="39.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="lbPhone" layoutX="601.0" layoutY="107.0" prefHeight="17.0" prefWidth="128.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="tfQuantity" layoutX="142.0" layoutY="289.0" prefHeight="31.0" prefWidth="43.0" />
+      <Pane fx:id="paneSeat" layoutX="302.0" layoutY="147.0" prefHeight="352.0" prefWidth="510.0" style="-fx-border-color: black;">
+         <children>
+            <Button fx:id="btnA1" layoutX="27.0" layoutY="95.0" mnemonicParsing="false" onAction="#btnA1Click" prefHeight="30.0" prefWidth="65.0" text="A1">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnA2" layoutX="128.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnA2Click" prefHeight="31.0" prefWidth="65.0" text="A2">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnA3" layoutX="230.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnA3Click" prefHeight="31.0" prefWidth="65.0" text="A3">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnA4" layoutX="328.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnA4Click" prefHeight="31.0" prefWidth="65.0" text="A4">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnA5" layoutX="426.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnA5Click" prefHeight="31.0" prefWidth="65.0" text="A5">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="4.0" fill="DODGERBLUE" height="21.0" layoutX="176.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="170.0" />
+            <Text layoutX="223.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Màn Hình" wrappingWidth="75.41015542298555">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnB1" layoutX="25.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnB1Click" prefHeight="30.0" prefWidth="65.0" text="B1">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnC1" layoutX="25.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnC1Click" prefHeight="30.0" prefWidth="65.0" text="C1">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnD1" layoutX="25.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnD1Click" prefHeight="30.0" prefWidth="65.0" text="D1">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnB2" layoutX="126.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnB2Click" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: red;" text="B2">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnB3" layoutX="228.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnB3Click" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: red;" text="B3">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnB4" layoutX="326.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnB4Click" prefHeight="31.0" prefWidth="65.0" text="B4">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnB5" layoutX="426.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnB5Click" prefHeight="31.0" prefWidth="65.0" text="B5">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnC2" layoutX="129.0" layoutY="216.0" mnemonicParsing="false" onAction="#btnC2Click" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: red;" text="C2">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnC3" layoutX="231.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnC3Click" prefHeight="31.0" prefWidth="65.0" text="C3">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnC4" layoutX="329.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnC4Click" prefHeight="31.0" prefWidth="65.0" text="C4">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnC5" layoutX="429.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnC5Click" prefHeight="31.0" prefWidth="65.0" text="C5">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnD2" layoutX="126.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnD2Click" prefHeight="31.0" prefWidth="65.0" text="D2">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnD3" layoutX="228.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnD3Click" prefHeight="31.0" prefWidth="65.0" text="D3">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnD4" layoutX="329.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnD4Click" prefHeight="31.0" prefWidth="65.0" text="D4">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnD5" layoutX="426.0" layoutY="273.0" mnemonicParsing="false" onAction="#btnD5Click" prefHeight="31.0" prefWidth="65.0" text="D5">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/seat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></Pane>
+      <Text layoutX="39.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chọn ghế :" AnchorPane.leftAnchor="39.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnDatve" layoutX="36.0" layoutY="410.0" mnemonicParsing="false" onAction="#btnDatveClick" prefHeight="36.0" prefWidth="170.0" style="-fx-background-color: #0984e3; -fx-background-radius: 18; -fx-text-fill: #FFFFFF;" text="Đặt vé">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="39.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phòng" AnchorPane.leftAnchor="39.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="39.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giờ chiếu" AnchorPane.leftAnchor="39.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfSeat" layoutX="39.0" layoutY="356.0" prefHeight="31.0" prefWidth="180.0" AnchorPane.leftAnchor="39.0" />
+      <Label layoutX="151.0" layoutY="138.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="20.0" layoutX="433.0" layoutY="515.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" layoutX="646.0" layoutY="515.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Text layoutX="468.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ghế đã đặt" />
+      <Text layoutX="673.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ghế trống" />
+      <Label fx:id="lbTitleMovie" layoutX="386.0" layoutY="57.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
